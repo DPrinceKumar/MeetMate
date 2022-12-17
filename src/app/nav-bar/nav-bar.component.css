@@ -1,0 +1,195 @@
+@import url("../../assets/fonts/stylesheet.css");
+/* start header */
+.nav-bar {
+  width: 100%;
+  height: 6rem;
+  background-color: #ffff;
+  color: #262626;
+  border-bottom: 1px solid #dbdbdb;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+.nav-bar-wrapper {
+  position: relative;
+  top: 0.6rem;
+  left: 1.5rem;
+  /* width:  */
+  /* margin: 0rem 3rem 0rem 0rem; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: space-around; */
+}
+.nav-bar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+fa-icon.camicon {
+  display: none;
+}
+div.logo a {
+  text-decoration: none;
+  color: #000000;
+}
+.no-underline span {
+  margin-left: 1rem;
+  font-family: "Billabong", sans-serif !important;
+}
+.nav-bar-logo > img {
+  width: 5rem;
+  position: relative;
+  bottom: 0.7rem;
+}
+
+.navigation-search-container {
+  position: relative;
+  top: 0.3rem;
+  width: 30rem;
+  height: 3.5rem;
+  background-color: #efefef;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0.3rem 1.6rem;
+  cursor: pointer;
+}
+.navigation-search-container input[type="text"] {
+  border: 0;
+  outline: 0;
+  outline-width: 0;
+  background-color: #efefef;
+  text-align: left;
+  font-size: 1.6rem;
+  text-indent: 1rem;
+  padding: 0;
+}
+
+.navigation-search-container input {
+  background-color: #fafafa;
+  padding: 3px 20px;
+  padding-left: 25px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.0975);
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.navigation-search-container .fa-search {
+  position: relative;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.navigation-icons {
+  display: flex;
+  align-items: center;
+  /* margin-right: 3rem; */
+}
+.navigation-search-container input:focus {
+  outline: none;
+}
+
+.navigation-search-container input::placeholder {
+  text-align: left;
+}
+
+.navigation-icons a {
+  text-decoration: none;
+}
+
+.navigation-link fa-icon {
+  margin-left: 30px;
+  color: black;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.notification-bubble-wrapper {
+  position: relative;
+  top: -30px;
+  left: 42px;
+}
+
+.notification-bubble {
+  position: absolute;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 50%;
+  background: #ff2c74;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  padding: 5px 5px 3px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  display: block;
+}
+
+/* end header */
+
+/*  responsive */
+@media screen and (max-width: 800px) {
+  .nav-bar {
+    height: 5rem;
+  }
+  .nav-bar-logo img {
+    display: none;
+  }
+  .nav-bar-logo .logo {
+    display: flex;
+  }
+  .nav-bar-wrapper {
+    display: flex;
+    width: 100%;
+    position: relative;
+    left: 0rem;
+  }
+  .logo .svg_name {
+    display: flex;
+    flex-direction: row;
+  }
+  .navigation-search-container {
+    display: none;
+  }
+  .navigation-icons {
+    display: none;
+  }
+  div.logo svg[aria-label="New Story"] {
+    display: block;
+    align-items: center;
+    font-size: 4rem;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+  }
+  div.logo svg[aria-label="Messenger"] {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 4rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  div.logo svg[aria-label="Messenger"],
+  div.logo svg[aria-label="New Story"] {
+    display: none;
+  }
+  .nav-bar-wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .nav-bar-logo img {
+    display: block;
+  }
+  .navigation-search-container {
+    display: block;
+  }
+}
