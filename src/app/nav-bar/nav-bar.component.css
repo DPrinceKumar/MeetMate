@@ -9,10 +9,11 @@
   position: fixed;
   top: 0;
   z-index: 3;
+  /* display: flex; */
 }
 .nav-bar-wrapper {
   position: relative;
-  top: 0.6rem;
+  top: -0.5rem;
   left: 1.5rem;
 }
 .nav-bar-logo {
@@ -40,7 +41,7 @@ div.logo a {
 
 .navigation-search-container {
   position: relative;
-  top: 0.3rem;
+  /* top: 0.3rem; */
   width: 30rem;
   height: 3.5rem;
   background-color: #efefef;
@@ -179,6 +180,7 @@ div.logo a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
   }
   .nav-bar-logo img {
