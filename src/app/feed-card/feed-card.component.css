@@ -1,0 +1,69 @@
+.card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.6rem;
+  width: 100%;
+}
+.profile_img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-header .profile_img {
+  height: 3rem;
+  width: 9rem;
+  margin: 1rem;
+}
+.card-header .profile_img img {
+  height: 4rem;
+  border-radius: 50%;
+  width: 4rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.username p{
+    margin:0 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+}
+.feedMore {
+    margin-right: 2rem;
+}
+.card-body{
+  width:62rem;
+}
+.card-body img{
+    max-width:98.1%;
+    padding: 0.3rem;
+}
+.card-footer{
+    display: flex;
+    margin: 0.5rem 0rem;
+    flex-direction: column;
+}
+.lcss-wrapper{
+    display: flex;
+}
+.card-footer .lcss-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 10rem;
+    margin: 1rem 0rem;
+}
+div.comments-wrapper p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-left: 1rem;
+}
+div.time-wrapper p{
+    margin-left: 1rem;
+    font-size: 1.4rem;
+}
