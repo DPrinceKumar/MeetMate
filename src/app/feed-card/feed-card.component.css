@@ -37,10 +37,11 @@
     margin-right: 2rem;
 }
 .card-body{
-  width:62rem;
+  width:60.8rem;
+  background-color: #fff;
 }
 .card-body img{
-    max-width:98.1%;
+    max-width:100%;
     padding: 0.3rem;
 }
 .card-footer{

@@ -10,16 +10,14 @@
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 1rem;
-  /* border: 1px solid #000; */
-  width:62rem;
+  width: 62rem;
   position: relative;
   left: calc(100vw - 86vw);
-  /* margin-left: 13rem; */
 }
 .status-bar {
   position: relative;
 
-  width:61rem;
+  width: 61rem;
   height: 10rem;
   border-radius: 8px;
   border: 1px solid #dbdbdb;
@@ -28,14 +26,19 @@
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
+.right-profile-bar {
+  position: absolute;
+  max-width:25rem;
+  right: calc(100% - 80%);
+  top: 9rem;
+}
 .feed-card {
-  width:61rem;
+  width: 61rem;
   position: relative;
-
   display: flex;
   justify-content: flex-start;
-  min-height: calc( 100vh - 30vh);
-    border: 1px solid #dbdbdb;
+  min-height: calc(100vh - 30vh);
+  border: 1px solid #dbdbdb;
   border-radius: 8px 8px 0px 0px;
   -webkit-border-radius: 8px 8px 0px 0px;
   -moz-border-radius: 8px 8px 0px 0px;

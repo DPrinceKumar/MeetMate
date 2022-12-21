@@ -1,0 +1,46 @@
+.profile-switch-wrapper {
+  max-height: 13rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile-image {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 2rem;
+  /*padding:1rem */
+}
+.profile-image img {
+  max-width: 6rem;
+  max-height: max-content;
+  /* background-color: red; */
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.name-wrapper {
+  width: max-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+}
+.name-wrapper h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1rem;
+}
+.name-wrapper p {
+  font-size: 1.4rem;
+  line-height: 1rem;
+}
+.switchbtn {
+  font-size: 1rem;
+  font-weight: bolder;
+  color: rgb(7, 235, 223);
+}
