@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MeetMateDataList } from '../MeetMateData';
 import { SuggestionsForYouDatalist } from './suggestionsData';
 
 @Component({
@@ -8,30 +9,11 @@ import { SuggestionsForYouDatalist } from './suggestionsData';
 })
 export class SuggestionsForYouComponent implements OnInit {
   userList: SuggestionsForYouDatalist[] = [];
+
+
+  @Input() SuggestionsForYou:MeetMateDataList[];
   constructor() {}
   ngOnInit(): void {
-    this.userList = [
-      {
-        username: '@abtdprincekumar',
-        Full_name: 'Prince kumar',
-        imageUrl:
-          'https://www.pngarts.com/files/11/Avatar-PNG-Free-Download.png',
-        imageUrlAlt: 'profile-Picture',
-      },
-      {
-        username: '@pankaj2kumar56',
-        Full_name: 'Pankaj kumar',
-        imageUrl:
-          'https://www.pngarts.com/files/11/Avatar-PNG-Free-Download.png',
-        imageUrlAlt: 'profile-Picture',
-      },
-      {
-        username: '@anuragSinghtT',
-        Full_name: 'Anurag Singh tomar',
-        imageUrl:
-          'https://www.pngarts.com/files/11/Avatar-PNG-Free-Download.png',
-        imageUrlAlt: 'profile-Picture',
-      },
-    ];
+
   }
 }

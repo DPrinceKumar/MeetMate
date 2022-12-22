@@ -8,14 +8,14 @@
 </div>
 <div class="right-profile-bar">
     <div class="profile-switch">
-        <app-profile-switch ></app-profile-switch>
+        <app-profile-switch [switch]="data"></app-profile-switch>
     </div>
     <div class="suggestions">
-        <app-suggestions-for-you></app-suggestions-for-you>
+        <app-suggestions-for-you [SuggestionsForYou]="data"></app-suggestions-for-you>
     </div>
     </div>
 <div class="feed-card-wrapper">
     <div class="feed-card">
-        <app-feed-card></app-feed-card>
+        <app-feed-card [feed]="data"></app-feed-card>
     </div>
 </div>

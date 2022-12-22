@@ -1,17 +1,17 @@
 <div class="suggestion">
     <p>Suggestions For You</p>
 </div>
-<div *ngFor="let user of userList">
+<div *ngFor="let user of SuggestionsForYou">
   <div class="suggestions-wrapper">
     <div class="suggestions-profile-image">
       <img
-        src={{user.imageUrl}}
-        alt={{user.imageUrlAlt}}
+        src={{user.profileImageUrl}}
+        alt={{user.profileImageAlt}}
       />
     </div>
     <div class="profile-name-wrapper">
-      <h5>{{user.username}}</h5>
-      <p>{{user.Full_name}}</p>
+      <h5>{{user.userName}}</h5>
+      <p>{{user.fullName}}</p>
     </div>
     <div class="follow">
       <p>Follow</p>

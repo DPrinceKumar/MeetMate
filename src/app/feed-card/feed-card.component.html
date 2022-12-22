@@ -1,7 +1,7 @@
-<div *ngFor="let feedData of feedCardDataList" class="border">
+<div *ngFor="let feedData of feed" class="border">
     <div class="card-header">
         <div class="profile_img">
-            <img src={{feedData.profilePicture}} alt={{feedData.userName}} srcset="">
+            <img src={{feedData.profileImageUrl}} alt={{feedData.profileImageAlt}} srcset="">
             <div class="username">
                 <p>{{feedData.userName}}</p>
             </div>
@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="card-body">
-        <img src={{feedData.feedImageUrl}} alt={{feedData.feedImageAlt}}>
+        <img src={{feedData.postFeed}} alt={{feedData.postFeedAlt}}>
     </div>
     <div class="card-footer">
         <div class="lcss-wrapper">
@@ -30,7 +30,7 @@
             <p>View all {{feedData.commentCount}} comments</p>
         </div>
         <div class="time-wrapper">
-            <p>{{feedData.daysAgoCount}} Day Ago</p>
+            <p>{{feedData.postDays}} Day Ago</p>
         </div>
     </div>
 </div>

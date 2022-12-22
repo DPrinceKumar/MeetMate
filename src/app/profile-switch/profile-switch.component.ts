@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MeetMateDataList } from '../MeetMateData';
 
 @Component({
   selector: 'app-profile-switch',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile-switch.component.css']
 })
 export class ProfileSwitchComponent {
-
+  @Input() switch:MeetMateDataList[];
 }
