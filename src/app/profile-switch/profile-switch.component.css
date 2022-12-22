@@ -1,5 +1,5 @@
 .profile-switch-wrapper {
-  max-height: 13rem;
+  height: 6rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -8,11 +8,11 @@
 .profile-image {
   width: 5rem;
   height: 5rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
   /*padding:1rem */
 }
 .profile-image img {
-  max-width: 6rem;
+  width: 5rem;
   max-height: max-content;
   /* background-color: red; */
   border-radius: 50%;
