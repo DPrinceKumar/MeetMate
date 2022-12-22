@@ -4,17 +4,18 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding:0 0.5rem;
 }
 .profile-image {
-  width: 5rem;
-  height: 5rem;
   margin-right: 1rem;
-  /*padding:1rem */
+  display: flex;
+  align-items: center;
 }
 .profile-image img {
-  width: 5rem;
-  max-height: max-content;
+width: 5rem;
+height: 5rem;
   /* background-color: red; */
+  margin-right: 0.5rem;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -22,13 +23,12 @@
   -o-border-radius: 50%;
 }
 .name-wrapper {
-  width: max-content;
-  margin: 0 auto;
+  width:max-content;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-right: 2rem;
+  margin-top: 0.5rem;
+
 }
 .name-wrapper h5 {
   font-size: 1.5rem;
@@ -38,9 +38,10 @@
 .name-wrapper p {
   font-size: 1.4rem;
   line-height: 1rem;
+  font-weight: 5oo;
 }
 .switchbtn {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: bolder;
   color: rgb(7, 235, 223);
 }
