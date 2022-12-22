@@ -1,9 +1,9 @@
-<!-- <div class="card-wrapper"> -->
+<div *ngFor="let feedData of feedCardDataList" class="border">
     <div class="card-header">
         <div class="profile_img">
-            <img src="https://s.yimg.com/ny/api/res/1.2/_9cxvN3sUtbvORHBCgQPzg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://s.yimg.com/os/creatr-uploaded-images/2022-11/41dd6c70-5ac9-11ed-9b1f-d433e456385f" alt="profile pic" srcset="">
+            <img src={{feedData.profilePicture}} alt={{feedData.userName}} srcset="">
             <div class="username">
-                <p>Username</p>
+                <p>{{feedData.userName}}</p>
             </div>
         </div>
         <div class="feedMore">
@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="card-body">
-        <img src="https://m.belfasttelegraph.co.uk/sport/football/world-cup/4fe23/42217500.ece/AUTOCROP/w620/WCup%20Netherlands%20Argentina%20Soccer" alt="feed Image">
+        <img src={{feedData.feedImageUrl}} alt={{feedData.feedImageAlt}}>
     </div>
     <div class="card-footer">
         <div class="lcss-wrapper">
@@ -26,11 +26,11 @@
             </div>
         </div>
         <div class="comments-wrapper">
-            <p>abtdprince 💕👍</p>
-            <p>View all 70 comments</p>
+            <p>{{feedData.userName}} {{feedData.comments}}</p>
+            <p>View all {{feedData.commentCount}} comments</p>
         </div>
         <div class="time-wrapper">
-            <p>1 Day Ago</p>
+            <p>{{feedData.daysAgoCount}} Day Ago</p>
         </div>
     </div>
-<!-- </div> -->
+</div>
