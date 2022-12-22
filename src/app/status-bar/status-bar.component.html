@@ -1,10 +1,9 @@
 <div class="horizontal-scroll" >
-  <div class="demo-1" *ngFor="let status of statusDataList">
+  <div class="demo-1" *ngFor="let status of status">
     <img
-      src={{status.imageSrc}}
-      alt={{status.imageAlt}}
-      srcset=""
+      src={{status.statusImg}}
+      alt={{status.statusbarAlt}}
     />
-    <p>{{status.userName}}</p>
+    <p>{{status.fullName}}</p>
   </div>
 </div>
