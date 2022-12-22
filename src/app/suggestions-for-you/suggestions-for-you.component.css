@@ -1,0 +1,47 @@
+.suggestion{
+    margin-top: 4rem;
+}
+.suggestion p{
+    font-size: 1.4rem;
+    font-weight: 600;
+    opacity: 0.7;
+}
+.suggestions-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.suggestions-profile-image img {
+  width: 4rem;
+}
+.follow {
+  font-size: 1rem;
+  font-weight: bolder;
+  color: rgb(7, 235, 223);
+}
+.footer {
+  margin-top: 4rem;
+  width:100%;
+}
+.footer-items {
+    height: 5rem;
+    width:25rem ;
+    display:flex;
+    padding-left: 0rem;
+}
+.footer-items ul{
+    display:flex;
+    flex-wrap: wrap;
+    padding: 0rem;
+    width: 24rem;
+}
+.footer-items ul li:first-child{
+    margin-left: 0;
+    list-style: none;
+}
+.footer-items ul li {
+    padding: 0rem;
+    list-style: none;
+    margin: 0 1rem 0 0;
+
+}
