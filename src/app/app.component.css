@@ -16,7 +16,6 @@
 }
 .status-bar {
   position: relative;
-
   width: 61rem;
   height: 10rem;
   border-radius: 8px;
@@ -28,10 +27,15 @@
 }
 .right-profile-bar {
   position: absolute;
-  max-width:25rem;
+  /* max-width:25rem; */
   right: calc(100% - 80%);
   top: 9rem;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 18vw;
 }
+
 .feed-card {
   width: 61rem;
   position: relative;
