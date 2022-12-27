@@ -4,6 +4,14 @@
   border-bottom: 1px solid #dbdbdb;
   margin-bottom: 7.5rem;
 }
+.navigation .bottom-nav-bar{
+  position: fixed;
+  bottom: 0rem;
+  z-index: 3;
+  width: 100%;
+  border-top: 1px solid #dbdbdb;;
+  background-color:  #fff;
+}
 .status-bar-wrapper,
 .feed-card-wrapper {
   display: flex;
@@ -68,6 +76,9 @@
     display: block;
     left: calc(100vw - 30vw);
   }
+  .bottom-nav-bar {
+    display: none;
+  }
 }
 @media screen and (min-width:1024px) {
   div.status-bar-wrapper {
@@ -80,5 +91,8 @@
     div.right-profile-bar{
     display: block;
     left: calc(100vw - 30vw);
+  }
+    .bottom-nav-bar {
+    display: none;
   }
 }

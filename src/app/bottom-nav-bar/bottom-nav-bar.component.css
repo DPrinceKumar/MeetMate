@@ -1,0 +1,19 @@
+.bottom-nav-wrapper{
+    height: 8rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media screen and (max-width:800px) {
+    svg[   aria-label="Home"],
+    svg[ aria-label="Search & Explore"],
+    svg[ aria-label="New post"],
+    svg[ aria-label="Activity"]{
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+}
+}

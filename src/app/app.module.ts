@@ -8,9 +8,10 @@ import { StatusBarComponent } from './status-bar/status-bar.component';
 import { FeedCardComponent } from './feed-card/feed-card.component';
 import { ProfileSwitchComponent } from './profile-switch/profile-switch.component';
 import { SuggestionsForYouComponent } from './suggestions-for-you/suggestions-for-you.component';
+import { BottomNavBarComponent } from './bottom-nav-bar/bottom-nav-bar.component';
 
 @NgModule({
-  declarations: [AppComponent, NavBarComponent, StatusBarComponent, FeedCardComponent, ProfileSwitchComponent, SuggestionsForYouComponent],
+  declarations: [AppComponent, NavBarComponent, StatusBarComponent, FeedCardComponent, ProfileSwitchComponent, SuggestionsForYouComponent, BottomNavBarComponent],
   imports: [BrowserModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
