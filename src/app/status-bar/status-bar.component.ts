@@ -1,6 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { MeetMateDataList } from '../MeetMateData';
-import { StatusDataList } from './statusData';
 
 @Component({
   selector: 'app-status-bar',

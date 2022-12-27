@@ -9,7 +9,7 @@ import {
   faRightFromBracket,
   faMagnifyingGlass,
   faHouse,
-  faCamera
+  faCamera,
 } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-nav-bar',

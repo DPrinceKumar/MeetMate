@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MeetMateDataList } from '../MeetMateData';
-import { FeedCardDataList } from './feed-card-Data';
 
 @Component({
   selector: 'app-feed-card',
@@ -9,7 +8,6 @@ import { FeedCardDataList } from './feed-card-Data';
 })
 export class FeedCardComponent implements OnInit {
   constructor(){}
-  feedCardDataList:FeedCardDataList[]=[];
 
   @Input() feed:MeetMateDataList[];
   ngOnInit(): void {
