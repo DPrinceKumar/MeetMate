@@ -1,4 +1,4 @@
-.border{
+.border {
   border: 1px solid #dbdbdb;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -36,44 +36,71 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.username p{
-    margin:0 1rem;
-    font-size: 1.4rem;
-    font-weight: 500;
-
+.username p {
+  margin: 0 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 .feedMore {
-    margin-right: 2rem;
+  margin-right: 2rem;
 }
-.card-body{
-  width:60.8rem;
+.card-body {
+  width: 60.8rem;
   background-color: #fff;
 }
-.card-body img{
-    max-width:100%;
-    padding: 0.3rem;
+.card-body img {
+  max-width: 100%;
+  padding: 0.3rem;
 }
-.card-footer{
-    display: flex;
-    margin: 0.5rem 0rem;
-    flex-direction: column;
+.card-footer {
+  display: flex;
+  margin: 0.5rem 0rem;
+  flex-direction: column;
 }
-.lcss-wrapper{
-    display: flex;
+.lcss-wrapper {
+  display: flex;
 }
-.card-footer .lcss-wrapper{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 10rem;
-    margin: 1rem 0rem;
+.card-footer .lcss-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 10rem;
+  margin: 1rem 0rem;
 }
-div.comments-wrapper p{
-    font-size: 1.6rem;
-    font-weight: 400;
-    margin-left: 1rem;
+div.comments-wrapper p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-left: 1rem;
 }
-div.time-wrapper p{
-    margin-left: 1rem;
-    font-size: 1.4rem;
+div.time-wrapper p {
+  margin-left: 1rem;
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 800px) {
+  .border{
+    margin-top: 2rem;
+  }
+  .card-header {
+    height: 8rem;
+  }
+  .card-header .profile_img img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+  .username p {
+    font-size: 2.5rem;
+  }
+  .feedMore + svg {
+    font-size: 30px;
+  }
+
+  div.comments-wrapper p,div.time-wrapper p {
+    font-size: 2rem;
+  }
 }
