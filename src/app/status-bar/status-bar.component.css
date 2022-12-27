@@ -45,3 +45,9 @@ div.horizontal-scroll div {
   width: 6rem;
   border: 3px solid #e95950;
 }
+
+@media screen and (max-width:800px){
+.profile_img p{
+font-size: 1.6rem;
+}
+}
