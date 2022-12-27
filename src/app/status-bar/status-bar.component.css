@@ -44,6 +44,10 @@ div.horizontal-scroll div {
   height: 6rem;
   width: 6rem;
   border: 3px solid #e95950;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 @media screen and (max-width:800px){
