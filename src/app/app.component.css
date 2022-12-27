@@ -45,10 +45,40 @@
 }
 @media screen and (max-width: 800px) {
   div.status-bar-wrapper {
-    left: calc(100vw - 90vw);
+    left: calc(100vw - 95vw);
     margin: inherit 0.5rem;
   }
   div.feed-card-wrapper {
-    left: calc(100vw - 90vw);
+    left: calc(100vw - 95vw);
+  }
+  div.right-profile-bar{
+    display: none;
+  }
+}
+
+@media screen and (min-width:920px) and (max-width:1024px) {
+  div.status-bar-wrapper {
+    left: calc(100vw - 97vw);
+    margin: inherit 0.5rem;
+  }
+  div.feed-card-wrapper {
+    left: calc(100vw - 97vw);
+  }
+    div.right-profile-bar{
+    display: block;
+    left: calc(100vw - 30vw);
+  }
+}
+@media screen and (min-width:1024px) {
+  div.status-bar-wrapper {
+    left: calc(100vw - 84vw);
+    margin: inherit 0.5rem;
+  }
+  div.feed-card-wrapper {
+    left: calc(100vw - 84vw);
+  }
+    div.right-profile-bar{
+    display: block;
+    left: calc(100vw - 30vw);
   }
 }
