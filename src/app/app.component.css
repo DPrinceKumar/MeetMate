@@ -42,5 +42,13 @@
   display: flex;
   justify-content: flex-start;
   min-height: calc(100vh - 30vh);
-
+}
+@media screen and (max-width: 800px) {
+  div.status-bar-wrapper {
+    left: calc(100vw - 90vw);
+    margin: inherit 0.5rem;
+  }
+  div.feed-card-wrapper {
+    left: calc(100vw - 90vw);
+  }
 }
