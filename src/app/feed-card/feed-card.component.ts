@@ -2,7 +2,6 @@ import {
   Component,
   OnInit,
   Input,
-  SimpleChange,
   ChangeDetectionStrategy,
 } from '@angular/core';
 import { MeetMateDataList } from '../MeetMateData';

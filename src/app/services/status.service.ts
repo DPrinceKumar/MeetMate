@@ -37,4 +37,22 @@ export class StatusService {
     return this.http.get(this.userUrl, this.useroptions);
     // return this.http.get(this.url, this.params, {headers: {this.headerPart}});
   }
+
+  /**
+   * suggestions profile
+   */
+  suggProUrl =
+    'https://instagram-scraper-2022.p.rapidapi.com/ig/similar_accounts/';
+  suggProfParam = new HttpParams().set('id_user', '528817151');
+  suggProfHeader = new HttpParams()
+    .set('X-RapidAPI-Key', 'aa0b5fc3ddmsh85d4d16748f64cbp1bd63cjsn93918e4aba48')
+    .set('X-RapidAPI-Host', 'instagram-scraper-2022.p.rapidapi.com');
+  suggProfParamOptions = {
+    params: this.suggProfParam,
+    header: this.suggProfHeader,
+  };
+
+  suggestedProfile() {
+    return this.http.get(this.suggProUrl, this.suggProfParamOptions);
+  }
 }

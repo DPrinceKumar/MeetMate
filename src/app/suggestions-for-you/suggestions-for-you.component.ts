@@ -1,19 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MeetMateDataList } from '../MeetMateData';
-import { SuggestionsForYouDatalist } from './suggestionsData';
-
+import { StatusService } from '../services/status.service';
 @Component({
   selector: 'app-suggestions-for-you',
   templateUrl: './suggestions-for-you.component.html',
   styleUrls: ['./suggestions-for-you.component.css'],
 })
 export class SuggestionsForYouComponent implements OnInit {
-  userList: SuggestionsForYouDatalist[] = [];
-
-
-  @Input() SuggestionsForYou:MeetMateDataList[];
-  constructor() {}
-  ngOnInit(): void {
-
+  suggestions: any;
+  @Input() SuggestionsForYou: MeetMateDataList[];
+  constructor(private meetMateProfileSugg: StatusService) {
+    meetMateProfileSugg.status().subscribe((suggestions) => {
+      this.suggestions = suggestions;
+      console.log(this.suggestions.data.user.edge_chaining.edges);
+    });
   }
+  ngOnInit(): void {}
 }
