@@ -61,6 +61,10 @@
             },
             "development": {
               "browserTarget": "chitChat:build:development"
+            },
+            "options": {
+              "browserTarget": "chitChat:build",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
