@@ -72,6 +72,18 @@ div.comments-wrapper p {
   font-weight: 400;
   margin-left: 1rem;
 }
+.like-wrapper{
+  margin-left: 1rem;
+}
+.sb_verified svg{
+  margin-left:0.5rem;
+   margin-right: 10px;
+   color: #5198e9;
+}
+span.sb_verified[data-isverified-hidden="false"]{
+  display: none;
+}
+
 div.time-wrapper p {
   margin-left: 1rem;
   font-size: 1.4rem;
