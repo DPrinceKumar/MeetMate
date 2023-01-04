@@ -36,17 +36,17 @@ export class AppComponent implements OnInit {
         gender: 'male',
         email: 'jenningsfernandez@tourmania.com',
         profileImageUrl:
-          'https://s.yimg.com/ny/api/res/1.2/_9cxvN3sUtbvORHBCgQPzg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://s.yimg.com/os/creatr-uploaded-images/2022-11/41dd6c70-5ac9-11ed-9b1f-d433e456385f',
+          'https://b.fssta.com/uploads/application/soccer/headshots/885.vresize.350.350.medium.14.png',
         profileImageAlt: 'Mollie profile image',
         postFeed:
-          'https://m.belfasttelegraph.co.uk/sport/football/world-cup/4fe23/42217500.ece/AUTOCROP/w620/WCup%20Netherlands%20Argentina%20Soccer',
+          'https://e0.365dm.com/22/12/768x432/skysports-cristiano-ronaldo_6009812.jpg',
         postFeedAlt: "Charity 's feeds",
         comments:
           'Officia laboris mollit ad deserunt amet voluptate aliqua Lorem cupidatat magna incididunt ipsum anim. Deserunt adipisicing velit quis ad magna consequat enim ex magna tempor. Nisi et ex occaecat enim minim irure est nisi.\r\nOfficia laboris mollit ad deserunt amet voluptate aliqua Lorem cupidatat magna incididunt ipsum anim. Deserunt adipisicing velit quis ad magna consequat enim ex magna tempor. Nisi et ex occaecat enim minim irure est nisi.\r\nOfficia laboris mollit ad deserunt amet voluptate aliqua Lorem cupidatat magna incididunt ipsum anim. Deserunt adipisicing velit quis ad magna consequat enim ex magna tempor. Nisi et ex occaecat enim minim irure est nisi.\r\nOfficia laboris mollit ad deserunt amet voluptate aliqua Lorem cupidatat magna incididunt ipsum anim. Deserunt adipisicing velit quis ad magna consequat enim ex magna tempor. Nisi et ex occaecat enim minim irure est nisi.\r\nOfficia laboris mollit ad deserunt amet voluptate aliqua Lorem cupidatat magna incididunt ipsum anim. Deserunt adipisicing velit quis ad magna consequat enim ex magna tempor. Nisi et ex occaecat enim minim irure est nisi.\r\nOfficia laboris mollit ad deserunt amet voluptate aliqua Lorem cupidatat magna incididunt ipsum anim. Deserunt adipisicing velit quis ad magna consequat enim ex magna tempor. Nisi et ex occaecat enim minim irure est nisi.\r\nOfficia laboris mollit ad deserunt amet voluptate aliqua Lorem cupidatat magna incididunt ipsum anim. Deserunt adipisicing velit quis ad magna consequat enim ex magna tempor. Nisi et ex occaecat enim minim irure est nisi.\r\nOfficia laboris mollit ad deserunt amet voluptate aliqua Lorem cupidatat magna incididunt ipsum anim. Deserunt adipisicing velit quis ad magna consequat enim ex magna tempor. Nisi et ex occaecat enim minim irure est nisi.\r\nOfficia laboris mollit ad deserunt amet voluptate aliqua Lorem cupidatat magna incididunt ipsum anim. Deserunt adipisicing velit quis ad magna consequat enim ex magna tempor. Nisi et ex occaecat enim minim irure est nisi.\r\n',
         commentCount: 17,
         postDays: 0,
         statusImg:
-          'https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_FMjpg_UX1000_.jpg',
+          'https://akm-img-a-in.tosshub.com/indiatoday/images/story/202301/cristiano_ronaldo-sixteen_nine.jpg?VersionId=W8wcv9WPjUfQahSppcNMdUxAinqb7KJk',
         statusbarAlt: "Barron's status",
       },
       {

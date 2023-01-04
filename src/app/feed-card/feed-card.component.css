@@ -80,7 +80,7 @@ div.comments-wrapper p {
    margin-right: 10px;
    color: #5198e9;
 }
-span.sb_verified[data-isverified-hidden="false"]{
+.sb_verified[data-isverified-hidden="false"]{
   display: none;
 }
 
