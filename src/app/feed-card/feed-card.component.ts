@@ -5,7 +5,7 @@ import {
   ChangeDetectionStrategy,
 } from '@angular/core';
 import { MeetMateDataList } from '../MeetMateData';
-import { StatusService } from '../services/status.service';
+import { StatusService } from '../services/status/status.service';
 
 @Component({
   selector: 'app-feed-card',
@@ -26,6 +26,9 @@ export class FeedCardComponent implements OnInit {
     //     this.status.data.user.edge_owner_to_timeline_media.edges[0].node
     //   );
     // });
+    /**
+     * userInfo
+     */
     // meetMate.userInfo().subscribe((data) => {
     //   this.userInfo = data;
     //   console.log('this.userInfo', this.userInfo.user);
