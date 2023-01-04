@@ -49,7 +49,51 @@ div.horizontal-scroll div {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-
+.modal-wrapper{
+  height: 100vh;
+  min-width: 100vh;
+  background-color: #413e3e5b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-wrapper .modal-content{
+  width: 25vw;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(12, 12, 12, 0.952); */
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.modal-header{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  color: red;
+  margin:0 auto;
+  justify-content: space-between;
+}
+.modal-body{
+  max-height:78vh;
+  max-width: 27vw;
+  overflow: scroll;
+  padding: 0.1rem ;
+}
+.modal-body img{
+  max-height:100%;
+  max-width:100%;
+  padding: 0;
+  border-radius: 0 0 1rem 1rem;
+  -webkit-border-radius: 0 0 1rem 1rem;
+  -moz-border-radius: 0 0 1rem 1rem;
+  -ms-border-radius: 0 0 1rem 1rem;
+  -o-border-radius: 0 0 1rem 1rem;
+}
 @media screen and (max-width:800px){
 .profile_img p{
 font-size: 1.6rem;

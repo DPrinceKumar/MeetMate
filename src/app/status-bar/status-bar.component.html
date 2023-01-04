@@ -1,9 +1,34 @@
-<div class="horizontal-scroll" >
-  <div class="profile_img" *ngFor="let status of status">
-    <img
-      src={{status.statusImg}}
-      alt={{status.statusbarAlt}}
-    />
-    <p>{{status.userName}}</p>
+<div class="horizontal-scroll">
+  <div class="profile_img" *ngFor="let status of statusData">
+    <a
+      class="text-danger"
+      type="button"
+      class="btn"
+      (click)="openPopup(status._id,status.statusImg,status.statusbarAlt,status.userName)"
+    >
+      <img src="{{ status.statusImg }}" alt="{{ status.statusbarAlt }}" />
+      <p>{{ status.userName }}</p>
+    </a>
+  </div>
+</div>
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: displayStyle }"
+>
+  <div class="modal-wrapper" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>{{username}}</h4>
+        <a class="btn btn-danger" (click)="closePopup()">
+           X
+        </a>
+      </div>
+      <div class="modal-body">
+         <img src={{imgSrc}} alt="{{'username'+imgAlt}}" srcset="">
+      </div>
+    </div>
   </div>
 </div>

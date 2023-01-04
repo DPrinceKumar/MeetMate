@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
         commentCount: 17,
         postDays: 0,
         statusImg:
-          'https://akm-img-a-in.tosshub.com/indiatoday/images/story/202301/cristiano_ronaldo-sixteen_nine.jpg?VersionId=W8wcv9WPjUfQahSppcNMdUxAinqb7KJk',
+          'https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
         statusbarAlt: "Barron's status",
       },
       {
@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
         commentCount: 12,
         postDays: 1,
         statusImg:
-          'https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_FMjpg_UX1000_.jpg',
+          'https://images.unsplash.com/photo-1636569061827-5d3516621d57?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
         statusbarAlt: "Gabriela's status",
       },
       {
@@ -90,7 +90,7 @@ export class AppComponent implements OnInit {
         commentCount: 36,
         postDays: 2,
         statusImg:
-          'https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_FMjpg_UX1000_.jpg',
+          'https://images.unsplash.com/photo-1635805739892-ab7b431400f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
         statusbarAlt: "Lewis's status",
       },
       {
