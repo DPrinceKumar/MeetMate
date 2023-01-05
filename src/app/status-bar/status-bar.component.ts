@@ -11,17 +11,25 @@ export class StatusBarComponent implements OnInit {
   ngOnInit(): void {}
   displayStyle = 'none';
 
-  username:string;imgSrc:string;imgAlt:string;
-  openPopup(_id:string,statusImage:string,statusImgAlt:string,statusUsrname:string) {
-    this.displayStyle = 'block';
-    for (let i = 0; i < this.statusData.length; i++) {
-      if (this.statusData[i]._id===_id){
-        this.username = this.statusData[i].userName;
-        this.imgSrc=this.statusData[i].statusImg;
-        this.imgAlt=this.statusData[i].statusbarAlt;
-      }
+  username: string;
+  imgSrc: string;
+  imgAlt: string;
 
-    }
+  openPopup(
+    _id: string,
+    statusImage: string,
+    statusImgAlt: string,
+    statusUsrname: string
+  ) {
+    this.displayStyle = 'block';
+
+    this.statusData.map((curVal, index, statusData) => {
+      if (curVal._id === _id) {
+        this.username = curVal.userName;
+        this.imgSrc = curVal.statusImg;
+        this.imgAlt = curVal.statusbarAlt;
+      }
+    });
   }
   closePopup() {
     this.displayStyle = 'none';

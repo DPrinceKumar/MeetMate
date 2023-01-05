@@ -18,14 +18,11 @@
   role="dialog"
   [ngStyle]="{ display: displayStyle }"
 >
-  <div class="modal-wrapper" role="document">
+  <div class="modal-wrapper" role="document" (click)="closePopup()">
     <div class="modal-content">
       <div class="modal-header">
         <h4>{{username}}</h4>
-        <a class="btn btn-danger" (click)="closePopup()">
-           X
-        </a>
-      </div>
+        </div>
       <div class="modal-body">
          <img src={{imgSrc}} alt="{{'username'+imgAlt}}" srcset="">
       </div>
