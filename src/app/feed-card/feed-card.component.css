@@ -88,6 +88,58 @@ div.time-wrapper p {
   margin-left: 1rem;
   font-size: 1.4rem;
 }
+div.modal-wrapper-pos{
+  height: 100vh;
+  width: 100vw;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #34373a65;
+}
+.modal-content{
+  width: 15vw;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.modal-header{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  color: red;
+  margin:0 auto;
+  justify-content: center;
+}
+.modal-body{
+  max-height:78vh;
+  max-width: 27vw;
+  padding: 0.1rem ;
+}
+.modal-body ul{
+  padding: 0rem;
+}
+.modal-body li{
+  width: 13vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.39);
+  list-style: none;
+  padding: 1rem;
+}
+.hidden{
+  display: none;
+  margin-right: 1rem;
+}
+.show{
+  display: block;
+}
 @media screen and (max-width: 800px) {
   .border {
     margin-top: 2rem;
