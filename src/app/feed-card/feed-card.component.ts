@@ -14,29 +14,27 @@ import { StatusService } from '../services/status/status.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FeedCardComponent implements OnInit {
-  status: any;
+  feedFrmApi: any;
   userInfo: any;
   Readmore = false;
   displayStyle = 'none';
-  constructor() {}
+  // constructor() {}
 
-  // constructor(private meetMate: StatusService) {
-  //   console.log('meetMateData', meetMate);
-  //   meetMate.status().subscribe((data) => {
-  //     this.status = data;
-  //     console.log(
-  //       'this.status',
-  //       this.status.data.user.edge_owner_to_timeline_media.edges[0].node
-  //     );
-  //   });
-  //   /**
-  //    * userInfo
-  //    */
-  //   meetMate.userInfo().subscribe((data) => {
-  //     this.userInfo = data;
-  //     console.log('this.userInfo', this.userInfo.user);
-  //   });
-  // }
+  constructor(private meetMate: StatusService) {
+    console.log('meetMateData', meetMate);
+    meetMate.feedFrmApi().subscribe((data) => {
+      this.feedFrmApi = data;
+      console.log(
+        'this.feedFrmApi',
+        this.feedFrmApi.data.user.edge_owner_to_timeline_media.edges[0].node
+      );
+    });
+
+    meetMate.userInfo().subscribe((data) => {
+      this.userInfo = data;
+      console.log('this.userInfo', this.userInfo.user);
+    });
+  }
 
   /**
    * converting unix days int to date
@@ -67,10 +65,10 @@ export class FeedCardComponent implements OnInit {
   // });
   // }
 
-  @Input() feed: MeetMateDataList[];
+  // @Input() feed: MeetMateDataList[];
 
   ngOnInit(): void {
-    console.log('oninixt,', this.feed);
+    // console.log('oninixt,', this.feed);
   }
 
   /**

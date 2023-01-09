@@ -9,7 +9,7 @@ export class StatusService {
   feedUrl = 'https://instagram-scraper-2022.p.rapidapi.com/ig/posts_username/';
   feedparams = new HttpParams().set('user', 'nasa');
   feedheaderPart = new HttpHeaders()
-    .set('X-RapidAPI-Key', '0ad39d22eemsh234329f2bffd585p1712e5jsn6770b4f591d3')
+    .set('X-RapidAPI-Key', '596e9dbb6amshb87bba3bd2fd644p1cf885jsnd5d9cf6a91bb')
     .set('X-RapidAPI-Host', 'instagram-scraper-2022.p.rapidapi.com');
 
   feedoptions = {
@@ -17,7 +17,8 @@ export class StatusService {
     headers: this.feedheaderPart,
   };
 
-  status() {
+  feedFrmApi() {
+    console.log('object');
     return this.http.get(this.feedUrl, this.feedoptions);
     // return this.http.get(this.url, this.params, {headers: {this.headerPart}});
   }
@@ -25,7 +26,7 @@ export class StatusService {
   userUrl = 'https://instagram-scraper-2022.p.rapidapi.com/ig/info_username/';
   userparams = new HttpParams().set('user', 'nasa');
   userheaderPart = new HttpHeaders()
-    .set('X-RapidAPI-Key', '0ad39d22eemsh234329f2bffd585p1712e5jsn6770b4f591d3')
+    .set('X-RapidAPI-Key', '596e9dbb6amshb87bba3bd2fd644p1cf885jsnd5d9cf6a91bb')
     .set('X-RapidAPI-Host', 'instagram-scraper-2022.p.rapidapi.com');
 
   useroptions = {
@@ -34,6 +35,7 @@ export class StatusService {
   };
 
   userInfo() {
+    console.log('userInfo ');
     return this.http.get(this.userUrl, this.useroptions);
     // return this.http.get(this.url, this.params, {headers: {this.headerPart}});
   }

@@ -1,43 +1,112 @@
-<!-- <div class="border"  *ngFor="let feedData of status.data.user.edge_owner_to_timeline_media.edges;">
-    <div class="card-header" >
-        <div class="profile_img">
-            <img crossorigin="anonymous" src={{userInfo.user.profile_pic_url}} alt={{userInfo.user.profile_pic_id}} srcset="">
-            <div class="username">
-                <p>{{userInfo.user.username }}<span class="sb_verified" attr-data-isverified-hidden={{userInfo.user.is_verified}} ><svg  focusable="false" data-prefix="fas" data-icon="badge-check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-badge-check fa-w-16"><path fill="currentColor" d="M512 256c0-37.7-23.7-69.9-57.1-82.4 14.7-32.4 8.8-71.9-17.9-98.6-26.7-26.7-66.2-32.6-98.6-17.9C325.9 23.7 293.7 0 256 0s-69.9 23.7-82.4 57.1c-32.4-14.7-72-8.8-98.6 17.9-26.7 26.7-32.6 66.2-17.9 98.6C23.7 186.1 0 218.3 0 256s23.7 69.9 57.1 82.4c-14.7 32.4-8.8 72 17.9 98.6 26.6 26.6 66.1 32.7 98.6 17.9 12.5 33.3 44.7 57.1 82.4 57.1s69.9-23.7 82.4-57.1c32.6 14.8 72 8.7 98.6-17.9 26.7-26.7 32.6-66.2 17.9-98.6 33.4-12.5 57.1-44.7 57.1-82.4zm-144.8-44.25L236.16 341.74c-4.31 4.28-11.28 4.25-15.55-.06l-75.72-76.33c-4.28-4.31-4.25-11.28.06-15.56l26.03-25.82c4.31-4.28 11.28-4.25 15.56.06l42.15 42.49 97.2-96.42c4.31-4.28 11.28-4.25 15.55.06l25.82 26.03c4.28 4.32 4.26 11.29-.06 15.56z" class=""></path></svg></span>
-                </p>
-            </div>
-        </div>
-        <div class="feedMore">
-            <svg aria-label="More options" class="_ab6-" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg>
-        </div>
+<div class="border" *ngFor="let feedData of feedFrmApi.data.user.edge_owner_to_timeline_media.edges;">
+  <div class="card-header">
+    <div class="profile_img">
+      <img crossorigin="anonymous" src={{userInfo.user.profile_pic_url}} alt={{userInfo.user.profile_pic_id}} srcset="">
+      <div class="username">
+        <p>{{userInfo.user.username }} <span class="sb_verified" [attr.data-isverified-hidden]="feedData.isActive">
+            <svg focusable="false" data-prefix="fas" data-icon="badge-check" role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-badge-check fa-w-16">
+              <path fill="currentColor"
+                d="M512 256c0-37.7-23.7-69.9-57.1-82.4 14.7-32.4 8.8-71.9-17.9-98.6-26.7-26.7-66.2-32.6-98.6-17.9C325.9 23.7 293.7 0 256 0s-69.9 23.7-82.4 57.1c-32.4-14.7-72-8.8-98.6 17.9-26.7 26.7-32.6 66.2-17.9 98.6C23.7 186.1 0 218.3 0 256s23.7 69.9 57.1 82.4c-14.7 32.4-8.8 72 17.9 98.6 26.6 26.6 66.1 32.7 98.6 17.9 12.5 33.3 44.7 57.1 82.4 57.1s69.9-23.7 82.4-57.1c32.6 14.8 72 8.7 98.6-17.9 26.7-26.7 32.6-66.2 17.9-98.6 33.4-12.5 57.1-44.7 57.1-82.4zm-144.8-44.25L236.16 341.74c-4.31 4.28-11.28 4.25-15.55-.06l-75.72-76.33c-4.28-4.31-4.25-11.28.06-15.56l26.03-25.82c4.31-4.28 11.28-4.25 15.56.06l42.15 42.49 97.2-96.42c4.31-4.28 11.28-4.25 15.55.06l25.82 26.03c4.28 4.32 4.26 11.29-.06 15.56z"
+                class=""></path>
+            </svg>
+          </span></p>
+      </div>
     </div>
-    <div class="card-body"   >
-        <img crossorigin="anonymous" src={{feedData.node.display_url}} alt={{feedData.node.shortcode}}>
+    <div class="feedMore">
+      <a class="text-danger " type="button" (click)="openMorePopup()">
+        <svg aria-label="More options" class="_ab6-" color="#262626" fill="#262626" height="24" role="img"
+          viewBox="0 0 24 24" width="24">
+          <circle cx="12" cy="12" r="1.5"></circle>
+          <circle cx="6" cy="12" r="1.5"></circle>
+          <circle cx="18" cy="12" r="1.5"></circle>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="card-body">
+    <img crossorigin="anonymous" src={{feedData.node.display_url}} alt={{feedData.node.shortcode}}>
+  </div>
+  <div class="card-footer">
+    <div class="lcss-wrapper">
+      <div class="like" (click)="likeDisLike()">
+        <!-- {{likeDisLike(false,feedData._id)}} -->
+
+        <!-- without red heart -->
+        <svg [ngStyle]="{ display: displayLikeOutLine }" aria-label="Like" color="#262626" fill="#262626" height="24"
+          role="img" viewBox="0 0 24 24" width="24">
+          <path
+            d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z">
+          </path>
+        </svg>
+        <!-- red Heart -->
+        <svg [ngStyle]="{ display: displayLikesolid }" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 245 245"
+          xml:space="preserve">
+          <g style="
+              stroke-linecap: butt;
+              stroke-linejoin: miter;
+              stroke-miterlimit: 10;
+              fill: none;
+              fill-rule: nonzero;
+              opacity: 1;
+            " transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+            <path
+              d="M 7.486 13.502 c 9.982 -9.982 26.165 -9.982 36.147 0 L 45 14.869 l 0 0 c 6.895 22.882 6.259 47.092 0 72.294 L 26.927 69.089 c 0 0 0 0 0 0 l -19.44 -19.44 C -2.495 39.667 -2.495 23.484 7.486 13.502"
+              style="
+                stroke: none;
+                stroke-width: 1;
+                stroke-dasharray: none;
+                stroke-linecap: butt;
+                stroke-linejoin: miter;
+                stroke-miterlimit: 10;
+                fill: rgb(214, 73, 62);
+                fill-rule: nonzero;
+                opacity: 1;
+              " transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            <path
+              d="M 82.514 13.502 c -9.982 -9.982 -26.165 -9.982 -36.147 0 L 45 14.869 l 0 0 v 72.294 l 18.073 -18.073 c 0 0 0 0 0 0 l 19.44 -19.44 C 92.495 39.667 92.495 23.484 82.514 13.502 z"
+              style="
+                stroke: none;
+                stroke-width: 1;
+                stroke-dasharray: none;
+                stroke-linecap: butt;
+                stroke-linejoin: miter;
+                stroke-miterlimit: 10;
+                fill: rgb(214, 73, 62);
+                fill-rule: nonzero;
+                opacity: 1;
+              " transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          </g>
+        </svg>
+      </div>
+      <div class="comment">
+        <svg aria-label="Comment" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+          <path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor"
+            stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+      </div>
+      <div class="share">
+        <svg aria-label="Share Post" color="#000" fill="#8e8e8e" height="24" role="img" viewBox="0 0 24 24" width="24">
+          <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3"
+            y2="10.083"></line>
+          <polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor"
+            stroke-linejoin="round" stroke-width="2"></polygon>
+        </svg>
+      </div>
+    </div>
+    <div class="like-wrapper">
+      <p>Liked By {{ feedData.node.edge_media_preview_like.count }}</p>
+    </div>
+    <div class="comments-wrapper">
+      <p><b>{{feedData.node.owner.username}} </b>{{feedData.node.edge_media_to_caption.edges.node}}</p>
+      <p>View all {{feedData.node.edge_media_to_comment.count}} comments</p>
+    </div>
+    <div class="time-wrapper">
+      <p>{{feedData.node.taken_at_timestamp}} Day Ago</p>
+    </div>
+  </div>
 </div>
-    <div class="card-footer">
-        <div class="lcss-wrapper">
-            <div class="like">
-                <svg aria-label="Like" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg>
-            </div>
-            <div class="comment">
-                <svg aria-label="Comment"  color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
-            </div>
-            <div class="share">
-                <svg aria-label="Share Post"  color="#000" fill="#8e8e8e" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
-            </div>
-        </div>
-        <div class="like-wrapper">
-            <p>Liked By {{ feedData.node.edge_media_preview_like.count }}</p>
-        </div>
-        <div class="comments-wrapper">
-            <p><b>{{feedData.node.owner.username}} </b>{{feedData.node.edge_media_to_caption.edges.node}}</p>
-            <p>View all {{feedData.node.edge_media_to_comment.count}} comments</p>
-        </div>
-        <div class="time-wrapper">
-            <p>{{feedData.node.taken_at_timestamp}} Day Ago</p>
-        </div>
-        </div>
-</div> -->
 
 <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{ display: displayStyle }">
   <div class="modal-wrapper-pos" role="document" (click)="closePopup()">
@@ -57,14 +126,14 @@
   </div>
 </div>
 
-<div class="border" *ngFor="let feedData of feed;let i=index">
+<!-- <div class="border" *ngFor="let feedData of feed; let i = index">
   <div class="card-header">
     <div class="profile_img">
-      <img crossorigin="anonymous" src={{feedData.profileImageUrl}} alt={{feedData.profileImageAlt}} />
+      <img crossorigin="anonymous" src="{{ feedData.profileImageUrl }}" alt="{{ feedData.profileImageAlt }}" />
       <div class="username">
         <p>
           {{ feedData.userName }}
-          <span class="sb_verified" [attr.data-isverified-hidden]="feedData.isActive ">
+          <span class="sb_verified" [attr.data-isverified-hidden]="feedData.isActive">
             <svg focusable="false" data-prefix="fas" data-icon="badge-check" role="img"
               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-badge-check fa-w-16">
               <path fill="currentColor"
@@ -76,9 +145,8 @@
       </div>
     </div>
 
-
     <div class="feedMore">
-      <a class="text-danger " type="button" (click)="openMorePopup()">
+      <a class="text-danger" type="button" (click)="openMorePopup()">
         <svg aria-label="More options" class="_ab6-" color="#262626" fill="#262626" height="24" role="img"
           viewBox="0 0 24 24" width="24">
           <circle cx="12" cy="12" r="1.5"></circle>
@@ -89,32 +157,58 @@
     </div>
   </div>
   <div class="card-body">
-    <img crossorigin="anonymous" src={{feedData.postFeed}} alt={{feedData.postFeedAlt}} />
+    <img crossorigin="anonymous" src="{{ feedData.postFeed }}" alt="{{ feedData.postFeedAlt }}" />
   </div>
   <div class="card-footer">
     <div class="lcss-wrapper">
       <div class="like" (click)="likeDisLike()">
-<!-- {{likeDisLike(false,feedData._id)}} -->
+        {{likeDisLike(false,feedData._id)}}
 
-        <!-- without red heart -->
-        <svg [ngStyle]="{display: displayLikeOutLine}" aria-label="Like" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+        without red heart
+        <svg [ngStyle]="{ display: displayLikeOutLine }" aria-label="Like" color="#262626" fill="#262626" height="24"
+          role="img" viewBox="0 0 24 24" width="24">
           <path
             d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z">
           </path>
         </svg>
-        <!--red Heart-->
-        <svg [ngStyle]="{display: displayLikesolid}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24"
-          height="24" viewBox="0 0 245 245" xml:space="preserve">
-          <g style="stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
-            transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+        red Heart
+        <svg [ngStyle]="{ display: displayLikesolid }" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 245 245"
+          xml:space="preserve">
+          <g style="
+              stroke-linecap: butt;
+              stroke-linejoin: miter;
+              stroke-miterlimit: 10;
+              fill: none;
+              fill-rule: nonzero;
+              opacity: 1;
+            " transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
             <path
               d="M 7.486 13.502 c 9.982 -9.982 26.165 -9.982 36.147 0 L 45 14.869 l 0 0 c 6.895 22.882 6.259 47.092 0 72.294 L 26.927 69.089 c 0 0 0 0 0 0 l -19.44 -19.44 C -2.495 39.667 -2.495 23.484 7.486 13.502"
-              style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(214,73,62); fill-rule: nonzero; opacity: 1;"
-              transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              style="
+                stroke: none;
+                stroke-width: 1;
+                stroke-dasharray: none;
+                stroke-linecap: butt;
+                stroke-linejoin: miter;
+                stroke-miterlimit: 10;
+                fill: rgb(214, 73, 62);
+                fill-rule: nonzero;
+                opacity: 1;
+              " transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
             <path
               d="M 82.514 13.502 c -9.982 -9.982 -26.165 -9.982 -36.147 0 L 45 14.869 l 0 0 v 72.294 l 18.073 -18.073 c 0 0 0 0 0 0 l 19.44 -19.44 C 92.495 39.667 92.495 23.484 82.514 13.502 z"
-              style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(214,73,62); fill-rule: nonzero; opacity: 1;"
-              transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              style="
+                stroke: none;
+                stroke-width: 1;
+                stroke-dasharray: none;
+                stroke-linecap: butt;
+                stroke-linejoin: miter;
+                stroke-miterlimit: 10;
+                fill: rgb(214, 73, 62);
+                fill-rule: nonzero;
+                opacity: 1;
+              " transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
           </g>
         </svg>
       </div>
@@ -142,7 +236,7 @@
         {{
         Readmore ? feedData.comments : (feedData.comments | slice : 0 : 50)
         }}
-        <!-- {{moreLess(feedData._id,feedData.comments)}} -->
+       ==comment this {{moreLess(feedData._id,feedData.comments)}}
         <span *ngIf="!Readmore">...</span>
         <span class="" (click)="Readmore = !Readmore">{{ Readmore ? "[... less]" : "...More" }}
         </span>
@@ -150,12 +244,14 @@
       <p>View all {{ feedData.commentCount }} comments</p>
     </div>
     <div class="time-wrapper">
-      <p>{{ feedData.index }}
-        <!-- {{ dayCount(feedData.index) }}  --> Day Ago
+      <p>
+        {{ feedData.index }}
+       ==comment this {{ dayCount(feedData.index) }}
+        Day Ago
       </p>
     </div>
   </div>
-</div>
+</div> -->
 
 <!--
 <div class="json">

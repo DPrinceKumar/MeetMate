@@ -11,26 +11,17 @@
     <app-status-bar [statusData]="data"></app-status-bar>
   </div>
 </div>
-<div class="right-profile-bar">
+ <div class="right-profile-bar">
   <div class="profile-switch">
     <app-profile-switch [switch]="data"></app-profile-switch>
   </div>
-  <div class="suggestions">
-    <app-suggestions-for-you
-      [SuggestionsForYou]="data"
-    ></app-suggestions-for-you>
+ <div class="suggestions">
+    <app-suggestions-for-you [SuggestionsForYou]="data" ></app-suggestions-for-you>
   </div>
 </div>
 <div class="feed-card-wrapper">
   <div class="feed-card">
-    <app-feed-card [feed]="data"></app-feed-card>
+    <!-- <app-feed-card [feed]="data"></app-feed-card> -->
+    <app-feed-card ></app-feed-card>
   </div>
 </div>
-
-<!--
-<div class="json">
-
-    <div class="temp"  *ngFor="let d of data2.data.user.edge_owner_to_timeline_media.edges; let i=index">
-        <p >{{d.node.id |json}} </p>
-    </div>
-</div> -->
